@@ -1,0 +1,96 @@
+digraph CFG {
+rankdir=TB
+44[shape=record, label="{StorageDead(_1) | return}"]
+43[shape=record, label="{StorageDead(_6) | drop(_1) \-\> [return: bb44, unwind: bb65]}"]
+42[shape=record, label="{StorageDead(_11) | drop(_6) \-\> [return: bb43, unwind: bb61]}"]
+41[shape=record, label="{StorageDead(_18) | drop(_11) \-\> [return: bb42, unwind: bb57]}"]
+40[shape=record, label="{StorageDead(_23) | drop(_18) \-\> [return: bb41, unwind: bb53]}"]
+37[shape=record, label="{StorageDead(_34) | goto \-\> bb25}"]
+34[shape=record, label="{StorageLive(_47) | _47 = &mut (((*_45) as Some).0: Node) | StorageLive(_48) | _48 = &mut (*_47) | _30 = move _48 | StorageDead(_48) | _33 = const () | StorageDead(_47) | StorageDead(_45) | StorageDead(_42) | goto \-\> bb37}"]
+39[shape=record, label="{StorageDead(_34) | StorageDead(_32) | StorageLive(_51) | _51 = &mut ((*_30).0: u32) | FakeRead(ForLet(None), _51) | _0 = const () | StorageDead(_51) | StorageDead(_31) | StorageDead(_30) | drop(_23) \-\> [return: bb40, unwind: bb49]}"]
+29[shape=record, label="{StorageLive(_39) | _39 = &mut (((*_37) as Some).0: Node) | StorageLive(_40) | _40 = &mut (*_39) | _30 = move _40 | StorageDead(_40) | _33 = const () | StorageDead(_39) | StorageDead(_37) | goto \-\> bb37}"]
+35[shape=record, label="{_32 = const () | StorageDead(_45) | goto \-\> bb38}"]
+33[shape=record, label="{falseEdge \-\> [real: bb34, imaginary: bb35]}"]
+38[shape=record, label="{StorageDead(_42) | goto \-\> bb39}"]
+30[shape=record, label="{_32 = const () | StorageDead(_37) | goto \-\> bb39}"]
+28[shape=record, label="{falseEdge \-\> [real: bb29, imaginary: bb30]}"]
+32[shape=record, label="{StorageLive(_45) | _45 = &mut (*((*_30).2: std::boxed::Box\<std::option::Option\<Node\>\>)) | FakeRead(ForMatchedPlace(None), _45) | _46 = discriminant((*_45)) | switchInt(move _46) \-\> [1_isize: bb33, otherwise: bb35]}"]
+36[shape=record, label="{_32 = const () | goto \-\> bb38}"]
+27[shape=record, label="{StorageLive(_37) | _37 = &mut (*((*_30).1: std::boxed::Box\<std::option::Option\<Node\>\>)) | FakeRead(ForMatchedPlace(None), _37) | _38 = discriminant((*_37)) | switchInt(move _38) \-\> [1_isize: bb28, otherwise: bb30]}"]
+31[shape=record, label="{StorageLive(_42) | StorageLive(_43) | _43 = ((*_30).0: u32) | StorageLive(_44) | _44 = _31 | _42 = Lt(move _43, move _44) | StorageDead(_44) | StorageDead(_43) | switchInt(move _42) \-\> [false: bb36, otherwise: bb32]}"]
+26[shape=record, label="{StorageLive(_34) | StorageLive(_35) | _35 = ((*_30).0: u32) | StorageLive(_36) | _36 = _31 | _34 = Gt(move _35, move _36) | StorageDead(_36) | StorageDead(_35) | switchInt(move _34) \-\> [false: bb31, otherwise: bb27]}"]
+25[shape=record, label="{falseUnwind \-\> [real: bb26, cleanup: bb45]}"]
+24[shape=record, label="{StorageDead(_24) | FakeRead(ForLet(None), _23) | AscribeUserType(_23, o, UserTypeProjection \{ base: UserType(19), projs: [] \}) | StorageLive(_30) | _30 = &mut _23 | FakeRead(ForLet(None), _30) | StorageLive(_31) | _31 = const 15_u32 | FakeRead(ForLet(None), _31) | AscribeUserType(_31, o, UserTypeProjection \{ base: UserType(21), projs: [] \}) | StorageLive(_32) | goto \-\> bb25}"]
+23[shape=record, label="{StorageDead(_27) | drop(_24) \-\> [return: bb24, unwind: bb49]}"]
+22[shape=record, label="{StorageDead(_28) | _23 = Node \{ data: const 17_u32, left: move _24, right: move _27 \} | drop(_27) \-\> [return: bb23, unwind: bb47]}"]
+21[shape=record, label="{StorageDead(_29) | _27 = Box::\<Option\<Node\>\>::new(move _28) \-\> [return: bb22, unwind: bb46]}"]
+20[shape=record, label="{StorageDead(_25) | StorageLive(_27) | StorageLive(_28) | StorageLive(_29) | _29 = move _18 | _28 = Option::\<Node\>::Some(move _29) | drop(_29) \-\> [return: bb21, unwind: bb46]}"]
+19[shape=record, label="{StorageDead(_26) | _24 = Box::\<Option\<Node\>\>::new(move _25) \-\> [return: bb20, unwind: bb48]}"]
+18[shape=record, label="{StorageDead(_19) | FakeRead(ForLet(None), _18) | AscribeUserType(_18, o, UserTypeProjection \{ base: UserType(15), projs: [] \}) | StorageLive(_23) | StorageLive(_24) | StorageLive(_25) | StorageLive(_26) | _26 = move _11 | _25 = Option::\<Node\>::Some(move _26) | drop(_26) \-\> [return: bb19, unwind: bb48]}"]
+17[shape=record, label="{StorageDead(_21) | drop(_19) \-\> [return: bb18, unwind: bb53]}"]
+16[shape=record, label="{StorageDead(_22) | _18 = Node \{ data: const 20_u32, left: move _19, right: move _21 \} | drop(_21) \-\> [return: bb17, unwind: bb51]}"]
+15[shape=record, label="{StorageDead(_20) | StorageLive(_21) | StorageLive(_22) | _22 = Option::\<Node\>::None | _21 = Box::\<Option\<Node\>\>::new(move _22) \-\> [return: bb16, unwind: bb50]}"]
+14[shape=record, label="{StorageDead(_12) | FakeRead(ForLet(None), _11) | AscribeUserType(_11, o, UserTypeProjection \{ base: UserType(11), projs: [] \}) | StorageLive(_18) | StorageLive(_19) | StorageLive(_20) | _20 = Option::\<Node\>::None | _19 = Box::\<Option\<Node\>\>::new(move _20) \-\> [return: bb15, unwind: bb52]}"]
+13[shape=record, label="{StorageDead(_15) | drop(_12) \-\> [return: bb14, unwind: bb57]}"]
+12[shape=record, label="{StorageDead(_16) | _11 = Node \{ data: const 13_u32, left: move _12, right: move _15 \} | drop(_15) \-\> [return: bb13, unwind: bb55]}"]
+11[shape=record, label="{StorageDead(_17) | _15 = Box::\<Option\<Node\>\>::new(move _16) \-\> [return: bb12, unwind: bb54]}"]
+10[shape=record, label="{StorageDead(_13) | StorageLive(_15) | StorageLive(_16) | StorageLive(_17) | _17 = move _6 | _16 = Option::\<Node\>::Some(move _17) | drop(_17) \-\> [return: bb11, unwind: bb54]}"]
+9[shape=record, label="{StorageDead(_14) | _12 = Box::\<Option\<Node\>\>::new(move _13) \-\> [return: bb10, unwind: bb56]}"]
+8[shape=record, label="{StorageDead(_7) | FakeRead(ForLet(None), _6) | AscribeUserType(_6, o, UserTypeProjection \{ base: UserType(7), projs: [] \}) | StorageLive(_11) | StorageLive(_12) | StorageLive(_13) | StorageLive(_14) | _14 = move _1 | _13 = Option::\<Node\>::Some(move _14) | drop(_14) \-\> [return: bb9, unwind: bb56]}"]
+7[shape=record, label="{StorageDead(_9) | drop(_7) \-\> [return: bb8, unwind: bb61]}"]
+6[shape=record, label="{StorageDead(_10) | _6 = Node \{ data: const 15_u32, left: move _7, right: move _9 \} | drop(_9) \-\> [return: bb7, unwind: bb59]}"]
+5[shape=record, label="{StorageDead(_8) | StorageLive(_9) | StorageLive(_10) | _10 = Option::\<Node\>::None | _9 = Box::\<Option\<Node\>\>::new(move _10) \-\> [return: bb6, unwind: bb58]}"]
+4[shape=record, label="{StorageDead(_2) | FakeRead(ForLet(None), _1) | AscribeUserType(_1, o, UserTypeProjection \{ base: UserType(3), projs: [] \}) | StorageLive(_6) | StorageLive(_7) | StorageLive(_8) | _8 = Option::\<Node\>::None | _7 = Box::\<Option\<Node\>\>::new(move _8) \-\> [return: bb5, unwind: bb60]}"]
+3[shape=record, label="{StorageDead(_4) | drop(_2) \-\> [return: bb4, unwind: bb65]}"]
+2[shape=record, label="{StorageDead(_5) | _1 = Node \{ data: const 10_u32, left: move _2, right: move _4 \} | drop(_4) \-\> [return: bb3, unwind: bb63]}"]
+1[shape=record, label="{StorageDead(_3) | StorageLive(_4) | StorageLive(_5) | _5 = Option::\<Node\>::None | _4 = Box::\<Option\<Node\>\>::new(move _5) \-\> [return: bb2, unwind: bb62]}"]
+0[shape=record, label="{StorageLive(_1) | StorageLive(_2) | StorageLive(_3) | _3 = Option::\<Node\>::None | _2 = Box::\<Option\<Node\>\>::new(move _3) \-\> [return: bb1, unwind: bb64]}"]
+0 -> 1
+1 -> 2
+2 -> 3
+3 -> 4
+4 -> 5
+5 -> 6
+6 -> 7
+7 -> 8
+8 -> 9
+9 -> 10
+10 -> 11
+11 -> 12
+12 -> 13
+13 -> 14
+14 -> 15
+15 -> 16
+16 -> 17
+17 -> 18
+18 -> 19
+19 -> 20
+20 -> 21
+21 -> 22
+22 -> 23
+23 -> 24
+24 -> 25
+25 -> 26
+26 -> 31
+26 -> 27
+31 -> 36
+31 -> 32
+27 -> 28
+27 -> 30
+36 -> 38
+32 -> 33
+32 -> 35
+28 -> 29
+30 -> 39
+38 -> 39
+33 -> 34
+35 -> 38
+29 -> 37
+39 -> 40
+34 -> 37
+37 -> 25
+40 -> 41
+41 -> 42
+42 -> 43
+43 -> 44
+}

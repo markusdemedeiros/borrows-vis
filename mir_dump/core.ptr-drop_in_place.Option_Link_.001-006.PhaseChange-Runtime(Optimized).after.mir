@@ -1,0 +1,20 @@
+// MIR for `std::ptr::drop_in_place` after PhaseChange-Runtime(Optimized)
+
+fn std::ptr::drop_in_place(_1: *mut Option<Link>) -> () {
+    let mut _0: ();                      // return place in scope 0 at /rustc/5c8bff74bc1c52bef0c79f3689bb227f51f3e82d/library/core/src/ptr/mod.rs:491:1: 491:56
+    let mut _2: isize;                   // in scope 0 at /rustc/5c8bff74bc1c52bef0c79f3689bb227f51f3e82d/library/core/src/ptr/mod.rs:491:1: 491:56
+    let mut _3: isize;                   // in scope 0 at /rustc/5c8bff74bc1c52bef0c79f3689bb227f51f3e82d/library/core/src/ptr/mod.rs:491:1: 491:56
+
+    bb0: {
+        _2 = discriminant((*_1));        // scope 0 at /rustc/5c8bff74bc1c52bef0c79f3689bb227f51f3e82d/library/core/src/ptr/mod.rs:491:1: 491:56
+        switchInt(move _2) -> [0_isize: bb1, otherwise: bb2]; // scope 0 at /rustc/5c8bff74bc1c52bef0c79f3689bb227f51f3e82d/library/core/src/ptr/mod.rs:491:1: 491:56
+    }
+
+    bb1: {
+        return;                          // scope 0 at /rustc/5c8bff74bc1c52bef0c79f3689bb227f51f3e82d/library/core/src/ptr/mod.rs:491:1: 491:56
+    }
+
+    bb2: {
+        drop((((*_1) as Some).0: Link)) -> bb1; // scope 0 at /rustc/5c8bff74bc1c52bef0c79f3689bb227f51f3e82d/library/core/src/ptr/mod.rs:491:1: 491:56
+    }
+}

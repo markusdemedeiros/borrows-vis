@@ -1,0 +1,37 @@
+digraph RegionInferenceContext {
+    r0[label="\'_#0r"][shape="box"];
+    r1[label="\'_#1r"][shape="box"];
+    r2[label="\'_#2r"][shape="box"];
+    r3[label="\'_#3r"][shape="box"];
+    r4[label="\'_#4r"][shape="box"];
+    r5[label="\'_#5r"][shape="box"];
+    r6[label="\'_#6r"][shape="box"];
+    r7[label="\'_#7r"][shape="box"];
+    r8[label="\'_#8r"][shape="box"];
+    r9[label="\'_#9r"][shape="box"];
+    r10[label="\'_#10r"][shape="box"];
+    r11[label="\'_#11r"][shape="box"];
+    r12[label="\'_#12r"][shape="box"];
+    r13[label="\'_#13r"][shape="box"];
+    r14[label="\'_#14r"][shape="box"];
+    r15[label="\'_#15r"][shape="box"];
+    r16[label="\'_#16r"][shape="box"];
+    r17[label="\'_#17r"][shape="box"];
+    r2 -> r10[label="Single(bb24[4])"];
+    r3 -> r11[label="Single(bb27[1])"];
+    r10 -> r3[label="Single(bb27[1])"];
+    r4 -> r12[label="Single(bb29[1])"];
+    r11 -> r4[label="Single(bb29[1])"];
+    r5 -> r13[label="Single(bb29[3])"];
+    r12 -> r5[label="Single(bb29[3])"];
+    r13 -> r10[label="Single(bb29[4])"];
+    r6 -> r14[label="Single(bb32[1])"];
+    r10 -> r6[label="Single(bb32[1])"];
+    r7 -> r15[label="Single(bb34[1])"];
+    r14 -> r7[label="Single(bb34[1])"];
+    r8 -> r16[label="Single(bb34[3])"];
+    r15 -> r8[label="Single(bb34[3])"];
+    r16 -> r10[label="Single(bb34[4])"];
+    r9 -> r17[label="Single(bb39[3])"];
+    r10 -> r9[label="Single(bb39[3])"];
+}

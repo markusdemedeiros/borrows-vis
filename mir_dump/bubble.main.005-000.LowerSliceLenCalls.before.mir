@@ -1,0 +1,291 @@
+// MIR for `main` before LowerSliceLenCalls
+
+fn main() -> () {
+    let mut _0: ();                      // return place in scope 0 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:3:11: 3:11
+    let mut _1: std::option::Option<Link>; // in scope 0 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:5:9: 5:16
+    let mut _3: Link;                    // in scope 0 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:6:30: 6:64
+    let mut _4: std::boxed::Box<std::option::Option<Link>>; // in scope 0 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:6:41: 6:54
+    let mut _5: std::option::Option<Link>; // in scope 0 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:6:50: 6:53
+    let mut _7: Link;                    // in scope 0 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:7:30: 7:64
+    let mut _8: std::boxed::Box<std::option::Option<Link>>; // in scope 0 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:7:41: 7:54
+    let mut _9: std::option::Option<Link>; // in scope 0 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:7:50: 7:53
+    let mut _11: Link;                   // in scope 0 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:8:30: 8:64
+    let mut _12: std::boxed::Box<std::option::Option<Link>>; // in scope 0 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:8:41: 8:54
+    let mut _13: std::option::Option<Link>; // in scope 0 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:8:50: 8:53
+    let mut _15: Link;                   // in scope 0 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:9:30: 9:64
+    let mut _16: std::boxed::Box<std::option::Option<Link>>; // in scope 0 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:9:41: 9:54
+    let mut _17: std::option::Option<Link>; // in scope 0 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:9:50: 9:53
+    let mut _20: &mut Link;              // in scope 0 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:13:28: 16:6
+    let mut _21: isize;                  // in scope 0 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:14:9: 14:13
+    let mut _22: !;                      // in scope 0 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:14:17: 14:23
+    let mut _24: ();                     // in scope 0 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:3:1: 27:2
+    let mut _25: &mut std::option::Option<Link>; // in scope 0 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:18:25: 18:41
+    let mut _26: isize;                  // in scope 0 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:18:15: 18:22
+    let _28: ();                         // in scope 0 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:19:9: 23:10
+    let mut _29: bool;                   // in scope 0 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:19:12: 19:27
+    let mut _30: u32;                    // in scope 0 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:19:12: 19:18
+    let mut _31: u32;                    // in scope 0 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:19:21: 19:27
+    let mut _33: u32;                    // in scope 0 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:21:22: 21:28
+    let mut _34: u32;                    // in scope 0 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:22:22: 22:25
+    let mut _35: &mut Link;              // in scope 0 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:25:13: 25:14
+    let mut _36: !;                      // in scope 0 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:18:5: 26:6
+    let _37: ();                         // in scope 0 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:18:5: 26:6
+    let mut _38: !;                      // in scope 0 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:18:5: 26:6
+    let mut _39: std::boxed::Box<std::option::Option<Link>>; // in scope 0 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:13:9: 13:14
+    let mut _40: *const std::option::Option<Link>; // in scope 0 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:13:9: 13:14
+    scope 1 {
+        debug ll0 => _1;                 // in scope 1 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:5:9: 5:16
+        let mut _2: std::option::Option<Link>; // in scope 1 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:6:9: 6:16
+        scope 2 {
+            debug ll1 => _2;             // in scope 2 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:6:9: 6:16
+            let mut _6: std::option::Option<Link>; // in scope 2 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:7:9: 7:16
+            scope 3 {
+                debug ll2 => _6;         // in scope 3 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:7:9: 7:16
+                let mut _10: std::option::Option<Link>; // in scope 3 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:8:9: 8:16
+                scope 4 {
+                    debug ll3 => _10;    // in scope 4 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:8:9: 8:16
+                    let mut _14: std::option::Option<Link>; // in scope 4 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:9:9: 9:16
+                    scope 5 {
+                        debug ll4 => _14; // in scope 5 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:9:9: 9:16
+                        let mut _18: &mut std::option::Option<Link>; // in scope 5 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:10:9: 10:14
+                        scope 6 {
+                            debug l => _18; // in scope 6 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:10:9: 10:14
+                            let mut _19: &mut Link; // in scope 6 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:13:9: 13:14
+                            let _23: &mut Link; // in scope 6 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:15:14: 15:17
+                            scope 7 {
+                                debug x => _19; // in scope 7 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:13:9: 13:14
+                                scope 9 {
+                                    debug v => _27; // in scope 9 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:18:20: 18:21
+                                    let _27: &mut Link; // in scope 9 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:18:20: 18:21
+                                    let _32: u32; // in scope 9 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:20:17: 20:20
+                                    scope 10 {
+                                        debug tmp => _32; // in scope 10 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:20:17: 20:20
+                                    }
+                                }
+                            }
+                            scope 8 {
+                                debug lnk => _23; // in scope 8 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:15:14: 15:17
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    bb0: {
+        StorageLive(_1);                 // scope 0 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:5:9: 5:16
+        Deinit(_1);                      // scope 0 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:5:25: 5:29
+        discriminant(_1) = 0;            // scope 0 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:5:25: 5:29
+        StorageLive(_2);                 // scope 1 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:6:9: 6:16
+        StorageLive(_3);                 // scope 1 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:6:30: 6:64
+        StorageLive(_4);                 // scope 1 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:6:41: 6:54
+        StorageLive(_5);                 // scope 1 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:6:50: 6:53
+        _5 = move _1;                    // scope 1 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:6:50: 6:53
+        _4 = Box::<Option<Link>>::new(move _5) -> [return: bb1, unwind: bb17]; // scope 1 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:6:41: 6:54
+                                         // mir::Constant
+                                         // + span: /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:6:41: 6:49
+                                         // + user_ty: UserType(3)
+                                         // + literal: Const { ty: fn(Option<Link>) -> Box<Option<Link>> {Box::<Option<Link>>::new}, val: Value(<ZST>) }
+    }
+
+    bb1: {
+        StorageDead(_5);                 // scope 1 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:6:53: 6:54
+        Deinit(_3);                      // scope 1 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:6:30: 6:64
+        (_3.0: u32) = const 5_u32;       // scope 1 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:6:30: 6:64
+        (_3.1: std::boxed::Box<std::option::Option<Link>>) = move _4; // scope 1 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:6:30: 6:64
+        StorageDead(_4);                 // scope 1 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:6:63: 6:64
+        Deinit(_2);                      // scope 1 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:6:25: 6:65
+        ((_2 as Some).0: Link) = move _3; // scope 1 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:6:25: 6:65
+        discriminant(_2) = 1;            // scope 1 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:6:25: 6:65
+        StorageDead(_3);                 // scope 1 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:6:64: 6:65
+        StorageLive(_6);                 // scope 2 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:7:9: 7:16
+        StorageLive(_7);                 // scope 2 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:7:30: 7:64
+        StorageLive(_8);                 // scope 2 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:7:41: 7:54
+        StorageLive(_9);                 // scope 2 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:7:50: 7:53
+        _9 = move _2;                    // scope 2 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:7:50: 7:53
+        _8 = Box::<Option<Link>>::new(move _9) -> [return: bb2, unwind: bb17]; // scope 2 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:7:41: 7:54
+                                         // mir::Constant
+                                         // + span: /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:7:41: 7:49
+                                         // + user_ty: UserType(6)
+                                         // + literal: Const { ty: fn(Option<Link>) -> Box<Option<Link>> {Box::<Option<Link>>::new}, val: Value(<ZST>) }
+    }
+
+    bb2: {
+        StorageDead(_9);                 // scope 2 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:7:53: 7:54
+        Deinit(_7);                      // scope 2 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:7:30: 7:64
+        (_7.0: u32) = const 4_u32;       // scope 2 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:7:30: 7:64
+        (_7.1: std::boxed::Box<std::option::Option<Link>>) = move _8; // scope 2 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:7:30: 7:64
+        StorageDead(_8);                 // scope 2 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:7:63: 7:64
+        Deinit(_6);                      // scope 2 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:7:25: 7:65
+        ((_6 as Some).0: Link) = move _7; // scope 2 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:7:25: 7:65
+        discriminant(_6) = 1;            // scope 2 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:7:25: 7:65
+        StorageDead(_7);                 // scope 2 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:7:64: 7:65
+        StorageLive(_10);                // scope 3 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:8:9: 8:16
+        StorageLive(_11);                // scope 3 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:8:30: 8:64
+        StorageLive(_12);                // scope 3 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:8:41: 8:54
+        StorageLive(_13);                // scope 3 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:8:50: 8:53
+        _13 = move _6;                   // scope 3 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:8:50: 8:53
+        _12 = Box::<Option<Link>>::new(move _13) -> [return: bb3, unwind: bb17]; // scope 3 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:8:41: 8:54
+                                         // mir::Constant
+                                         // + span: /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:8:41: 8:49
+                                         // + user_ty: UserType(9)
+                                         // + literal: Const { ty: fn(Option<Link>) -> Box<Option<Link>> {Box::<Option<Link>>::new}, val: Value(<ZST>) }
+    }
+
+    bb3: {
+        StorageDead(_13);                // scope 3 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:8:53: 8:54
+        Deinit(_11);                     // scope 3 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:8:30: 8:64
+        (_11.0: u32) = const 3_u32;      // scope 3 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:8:30: 8:64
+        (_11.1: std::boxed::Box<std::option::Option<Link>>) = move _12; // scope 3 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:8:30: 8:64
+        StorageDead(_12);                // scope 3 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:8:63: 8:64
+        Deinit(_10);                     // scope 3 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:8:25: 8:65
+        ((_10 as Some).0: Link) = move _11; // scope 3 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:8:25: 8:65
+        discriminant(_10) = 1;           // scope 3 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:8:25: 8:65
+        StorageDead(_11);                // scope 3 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:8:64: 8:65
+        StorageLive(_14);                // scope 4 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:9:9: 9:16
+        StorageLive(_15);                // scope 4 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:9:30: 9:64
+        StorageLive(_16);                // scope 4 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:9:41: 9:54
+        StorageLive(_17);                // scope 4 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:9:50: 9:53
+        _17 = move _10;                  // scope 4 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:9:50: 9:53
+        _16 = Box::<Option<Link>>::new(move _17) -> [return: bb4, unwind: bb17]; // scope 4 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:9:41: 9:54
+                                         // mir::Constant
+                                         // + span: /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:9:41: 9:49
+                                         // + user_ty: UserType(12)
+                                         // + literal: Const { ty: fn(Option<Link>) -> Box<Option<Link>> {Box::<Option<Link>>::new}, val: Value(<ZST>) }
+    }
+
+    bb4: {
+        StorageDead(_17);                // scope 4 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:9:53: 9:54
+        Deinit(_15);                     // scope 4 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:9:30: 9:64
+        (_15.0: u32) = const 6_u32;      // scope 4 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:9:30: 9:64
+        (_15.1: std::boxed::Box<std::option::Option<Link>>) = move _16; // scope 4 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:9:30: 9:64
+        StorageDead(_16);                // scope 4 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:9:63: 9:64
+        Deinit(_14);                     // scope 4 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:9:25: 9:65
+        ((_14 as Some).0: Link) = move _15; // scope 4 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:9:25: 9:65
+        discriminant(_14) = 1;           // scope 4 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:9:25: 9:65
+        StorageDead(_15);                // scope 4 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:9:64: 9:65
+        StorageLive(_18);                // scope 5 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:10:9: 10:14
+        _18 = &mut _14;                  // scope 5 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:10:17: 10:25
+        StorageLive(_19);                // scope 6 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:13:9: 13:14
+        StorageLive(_20);                // scope 6 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:13:28: 16:6
+        _21 = discriminant((*_18));      // scope 6 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:13:34: 13:35
+        switchInt(move _21) -> [0_isize: bb7, 1_isize: bb5, otherwise: bb6]; // scope 6 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:13:28: 13:35
+    }
+
+    bb5: {
+        StorageLive(_23);                // scope 6 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:15:14: 15:17
+        _23 = &mut (((*_18) as Some).0: Link); // scope 6 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:15:14: 15:17
+        _20 = &mut (*_23);               // scope 8 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:15:22: 15:25
+        StorageDead(_23);                // scope 6 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:15:24: 15:25
+        _19 = &mut (*_20);               // scope 6 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:13:28: 16:6
+        StorageDead(_20);                // scope 6 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:16:6: 16:7
+        goto -> bb8;                     // scope 7 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:18:5: 26:6
+    }
+
+    bb6: {
+        unreachable;                     // scope 6 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:13:34: 13:35
+    }
+
+    bb7: {
+        _0 = const ();                   // scope 6 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:14:17: 14:23
+        StorageDead(_20);                // scope 6 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:16:6: 16:7
+        StorageDead(_19);                // scope 6 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:27:1: 27:2
+        StorageDead(_18);                // scope 5 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:27:1: 27:2
+        drop(_14) -> [return: bb15, unwind: bb17]; // scope 4 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:27:1: 27:2
+    }
+
+    bb8: {
+        StorageLive(_25);                // scope 9 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:18:25: 18:41
+        _39 = deref_copy ((*_19).1: std::boxed::Box<std::option::Option<Link>>); // scope 9 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:18:25: 18:41
+        _40 = (((_39.0: std::ptr::Unique<std::option::Option<Link>>).0: std::ptr::NonNull<std::option::Option<Link>>).0: *const std::option::Option<Link>); // scope 9 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:18:25: 18:41
+        _25 = &mut (*_40);               // scope 9 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:18:25: 18:41
+        _26 = discriminant((*_25));      // scope 9 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:18:15: 18:22
+        switchInt(move _26) -> [1_isize: bb9, otherwise: bb13]; // scope 9 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:18:15: 18:22
+    }
+
+    bb9: {
+        StorageLive(_27);                // scope 9 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:18:20: 18:21
+        _27 = &mut (((*_25) as Some).0: Link); // scope 9 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:18:20: 18:21
+        StorageLive(_28);                // scope 9 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:19:9: 23:10
+        StorageLive(_29);                // scope 9 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:19:12: 19:27
+        StorageLive(_30);                // scope 9 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:19:12: 19:18
+        _30 = ((*_19).0: u32);           // scope 9 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:19:12: 19:18
+        StorageLive(_31);                // scope 9 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:19:21: 19:27
+        _31 = ((*_27).0: u32);           // scope 9 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:19:21: 19:27
+        _29 = Gt(move _30, move _31);    // scope 9 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:19:12: 19:27
+        StorageDead(_31);                // scope 9 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:19:26: 19:27
+        StorageDead(_30);                // scope 9 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:19:26: 19:27
+        switchInt(move _29) -> [false: bb11, otherwise: bb10]; // scope 9 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:19:12: 19:27
+    }
+
+    bb10: {
+        StorageLive(_32);                // scope 9 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:20:17: 20:20
+        _32 = ((*_19).0: u32);           // scope 9 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:20:23: 20:29
+        StorageLive(_33);                // scope 10 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:21:22: 21:28
+        _33 = ((*_27).0: u32);           // scope 10 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:21:22: 21:28
+        ((*_19).0: u32) = move _33;      // scope 10 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:21:13: 21:28
+        StorageDead(_33);                // scope 10 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:21:27: 21:28
+        StorageLive(_34);                // scope 10 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:22:22: 22:25
+        _34 = _32;                       // scope 10 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:22:22: 22:25
+        ((*_27).0: u32) = move _34;      // scope 10 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:22:13: 22:25
+        StorageDead(_34);                // scope 10 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:22:24: 22:25
+        _28 = const ();                  // scope 9 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:19:28: 23:10
+        StorageDead(_32);                // scope 9 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:23:9: 23:10
+        goto -> bb12;                    // scope 9 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:19:9: 23:10
+    }
+
+    bb11: {
+        _28 = const ();                  // scope 9 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:23:10: 23:10
+        goto -> bb12;                    // scope 9 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:19:9: 23:10
+    }
+
+    bb12: {
+        StorageDead(_29);                // scope 9 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:23:9: 23:10
+        StorageDead(_28);                // scope 9 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:23:9: 23:10
+        StorageLive(_35);                // scope 9 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:25:13: 25:14
+        _35 = &mut (*_27);               // scope 9 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:25:13: 25:14
+        _19 = move _35;                  // scope 9 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:25:9: 25:14
+        StorageDead(_35);                // scope 9 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:25:13: 25:14
+        _24 = const ();                  // scope 9 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:18:42: 26:6
+        StorageDead(_27);                // scope 7 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:26:5: 26:6
+        StorageDead(_25);                // scope 7 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:26:5: 26:6
+        goto -> bb8;                     // scope 7 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:18:5: 26:6
+    }
+
+    bb13: {
+        StorageLive(_37);                // scope 7 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:18:5: 26:6
+        _0 = const ();                   // scope 7 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:18:5: 26:6
+        StorageDead(_37);                // scope 7 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:26:5: 26:6
+        StorageDead(_25);                // scope 7 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:26:5: 26:6
+        StorageDead(_19);                // scope 6 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:27:1: 27:2
+        StorageDead(_18);                // scope 5 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:27:1: 27:2
+        drop(_14) -> [return: bb14, unwind: bb17]; // scope 4 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:27:1: 27:2
+    }
+
+    bb14: {
+        StorageDead(_14);                // scope 4 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:27:1: 27:2
+        StorageDead(_10);                // scope 3 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:27:1: 27:2
+        StorageDead(_6);                 // scope 2 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:27:1: 27:2
+        StorageDead(_2);                 // scope 1 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:27:1: 27:2
+        StorageDead(_1);                 // scope 0 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:27:1: 27:2
+        goto -> bb16;                    // scope 0 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:27:2: 27:2
+    }
+
+    bb15: {
+        StorageDead(_14);                // scope 4 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:27:1: 27:2
+        StorageDead(_10);                // scope 3 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:27:1: 27:2
+        StorageDead(_6);                 // scope 2 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:27:1: 27:2
+        StorageDead(_2);                 // scope 1 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:27:1: 27:2
+        StorageDead(_1);                 // scope 0 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:27:1: 27:2
+        goto -> bb16;                    // scope 0 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:27:2: 27:2
+    }
+
+    bb16: {
+        return;                          // scope 0 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:27:2: 27:2
+    }
+
+    bb17 (cleanup): {
+        resume;                          // scope 0 at /home/makrus/doc/usra/borrows-vis/examples/bubble.rs:3:1: 27:2
+    }
+}

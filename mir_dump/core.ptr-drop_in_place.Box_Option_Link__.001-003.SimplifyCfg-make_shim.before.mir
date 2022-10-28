@@ -1,0 +1,39 @@
+// MIR for `std::ptr::drop_in_place` before SimplifyCfg-make_shim
+
+fn std::ptr::drop_in_place(_1: *mut Box<Option<Link>>) -> () {
+    let mut _0: ();                      // return place in scope 0 at /rustc/5c8bff74bc1c52bef0c79f3689bb227f51f3e82d/library/core/src/ptr/mod.rs:491:1: 491:56
+    let mut _2: ();                      // in scope 0 at /rustc/5c8bff74bc1c52bef0c79f3689bb227f51f3e82d/library/core/src/ptr/mod.rs:491:1: 491:56
+    let mut _3: ();                      // in scope 0 at /rustc/5c8bff74bc1c52bef0c79f3689bb227f51f3e82d/library/core/src/ptr/mod.rs:491:1: 491:56
+    let mut _4: *const std::option::Option<Link>; // in scope 0 at /rustc/5c8bff74bc1c52bef0c79f3689bb227f51f3e82d/library/core/src/ptr/mod.rs:491:1: 491:56
+
+    bb0: {
+        goto -> bb5;                     // scope 0 at /rustc/5c8bff74bc1c52bef0c79f3689bb227f51f3e82d/library/core/src/ptr/mod.rs:491:1: 491:56
+    }
+
+    bb1: {
+        return;                          // scope 0 at /rustc/5c8bff74bc1c52bef0c79f3689bb227f51f3e82d/library/core/src/ptr/mod.rs:491:1: 491:56
+    }
+
+    bb2 (cleanup): {
+        resume;                          // scope 0 at /rustc/5c8bff74bc1c52bef0c79f3689bb227f51f3e82d/library/core/src/ptr/mod.rs:491:1: 491:56
+    }
+
+    bb3: {
+        _2 = alloc::alloc::box_free::<Option<Link>, std::alloc::Global>(move ((*_1).0: std::ptr::Unique<std::option::Option<Link>>), move ((*_1).1: std::alloc::Global)) -> bb1; // scope 0 at /rustc/5c8bff74bc1c52bef0c79f3689bb227f51f3e82d/library/core/src/ptr/mod.rs:491:1: 491:56
+                                         // mir::Constant
+                                         // + span: /rustc/5c8bff74bc1c52bef0c79f3689bb227f51f3e82d/library/core/src/ptr/mod.rs:491:1: 491:56
+                                         // + literal: Const { ty: unsafe fn(Unique<Option<Link>>, std::alloc::Global) {alloc::alloc::box_free::<Option<Link>, std::alloc::Global>}, val: Value(<ZST>) }
+    }
+
+    bb4 (cleanup): {
+        _3 = alloc::alloc::box_free::<Option<Link>, std::alloc::Global>(move ((*_1).0: std::ptr::Unique<std::option::Option<Link>>), move ((*_1).1: std::alloc::Global)) -> bb2; // scope 0 at /rustc/5c8bff74bc1c52bef0c79f3689bb227f51f3e82d/library/core/src/ptr/mod.rs:491:1: 491:56
+                                         // mir::Constant
+                                         // + span: /rustc/5c8bff74bc1c52bef0c79f3689bb227f51f3e82d/library/core/src/ptr/mod.rs:491:1: 491:56
+                                         // + literal: Const { ty: unsafe fn(Unique<Option<Link>>, std::alloc::Global) {alloc::alloc::box_free::<Option<Link>, std::alloc::Global>}, val: Value(<ZST>) }
+    }
+
+    bb5: {
+        _4 = deref_copy ((((*_1).0: std::ptr::Unique<std::option::Option<Link>>).0: std::ptr::NonNull<std::option::Option<Link>>).0: *const std::option::Option<Link>); // scope 0 at /rustc/5c8bff74bc1c52bef0c79f3689bb227f51f3e82d/library/core/src/ptr/mod.rs:491:1: 491:56
+        drop((*_4)) -> [return: bb3, unwind: bb4]; // scope 0 at /rustc/5c8bff74bc1c52bef0c79f3689bb227f51f3e82d/library/core/src/ptr/mod.rs:491:1: 491:56
+    }
+}

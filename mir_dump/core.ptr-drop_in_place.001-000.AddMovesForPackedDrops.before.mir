@@ -1,0 +1,13 @@
+// MIR for `std::ptr::drop_in_place` before AddMovesForPackedDrops
+
+fn std::ptr::drop_in_place(_1: *mut T) -> () {
+    let mut _0: ();                      // return place in scope 0 at /rustc/5c8bff74bc1c52bef0c79f3689bb227f51f3e82d/library/core/src/ptr/mod.rs:491:1: 491:56
+
+    bb0: {
+        goto -> bb1;                     // scope 0 at /rustc/5c8bff74bc1c52bef0c79f3689bb227f51f3e82d/library/core/src/ptr/mod.rs:491:1: 491:56
+    }
+
+    bb1: {
+        return;                          // scope 0 at /rustc/5c8bff74bc1c52bef0c79f3689bb227f51f3e82d/library/core/src/ptr/mod.rs:491:1: 491:56
+    }
+}

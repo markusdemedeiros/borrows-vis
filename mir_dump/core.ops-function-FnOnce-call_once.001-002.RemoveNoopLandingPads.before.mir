@@ -1,0 +1,13 @@
+// MIR for `call_once` before RemoveNoopLandingPads
+
+fn call_once(_1: fn(), _2: ()) -> <fn() as FnOnce<()>>::Output {
+    let mut _0: <fn() as std::ops::FnOnce<()>>::Output; // return place in scope 0 at /rustc/5c8bff74bc1c52bef0c79f3689bb227f51f3e82d/library/core/src/ops/function.rs:251:5: 251:71
+
+    bb0: {
+        _0 = move _1() -> bb1;           // scope 0 at /rustc/5c8bff74bc1c52bef0c79f3689bb227f51f3e82d/library/core/src/ops/function.rs:251:5: 251:71
+    }
+
+    bb1: {
+        return;                          // scope 0 at /rustc/5c8bff74bc1c52bef0c79f3689bb227f51f3e82d/library/core/src/ops/function.rs:251:5: 251:71
+    }
+}
